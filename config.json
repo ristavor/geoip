@@ -12,22 +12,6 @@
       "action": "add",
       "args": {
         "name": "ru-blocked",
-        "uri": "https://antifilter.download/list/ipresolve.lst"
-      }
-    },
-    {
-      "type": "text",
-      "action": "add",
-      "args": {
-        "name": "ru-blocked",
-        "uri": "https://antifilter.download/list/subnet.lst"
-      }
-    },
-    {
-      "type": "text",
-      "action": "add",
-      "args": {
-        "name": "ru-blocked-community",
         "uri": "https://community.antifilter.download/list/community.lst"
       }
     },
@@ -35,7 +19,7 @@
       "type": "text",
       "action": "add",
       "args": {
-        "name": "re-filter",
+        "name": "ru-blocked",
         "uri": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/refs/heads/main/ipsum.lst"
       }
     },
@@ -100,7 +84,7 @@
       "args": {
         "outputDir": "./output",
         "outputName": "geoip-ru-only.dat",
-        "wantedList": ["ru-blocked", "ru-blocked-community", "re-filter", "private"]
+        "wantedList": ["ru-blocked", "private"]
       }
     },
     {
@@ -109,7 +93,7 @@
       "args": {
         "outputDir": "./output",
         "oneFilePerList": true,
-        "wantedList": ["ru-blocked", "ru-blocked-community", "re-filter", "private"]
+        "wantedList": ["ru-blocked", "private"]
       }
     },
     {
@@ -127,7 +111,6 @@
         "outputName": "Country.mmdb",
         "overwriteList": [
           "ru-blocked",
-          "ru-blocked-community",
           "private",
           "cloudflare",
           "cloudfront",
@@ -168,7 +151,7 @@
       "args": {
         "outputDir": "./output",
         "outputName": "Country-ru-only.mmdb",
-        "wantedList": ["ru-blocked", "ru-blocked-community", "re-filter", "private"]
+        "wantedList": ["ru-blocked", "private"]
       }
     },
     {
