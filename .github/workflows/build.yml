@@ -20,10 +20,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Checkout runetfreedom/geoip
+      - name: Checkout ristavor/geoip
         uses: actions/checkout@v4
         with:
-          repository: runetfreedom/geoip
+          repository: ristavor/geoip
           path: geoip
 
       - name: Set up Go
