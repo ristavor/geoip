@@ -78,7 +78,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.TAG_NAME }}
-          release_name: ${{ env.RELEASE_NAME }}
+          name: ${{ env.RELEASE_NAME }}
           files: ./output/geoip.dat
           overwrite: true
         env:
