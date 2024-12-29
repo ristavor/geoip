@@ -28,6 +28,9 @@ jobs:
 
       - name: Set up Go
         uses: actions/setup-go@v5
+        with:
+          go-version-file: ./geoip/go.mod
+          cache-dependency-path: ./geoip/go.sum
 
       - name: Set variables
         run: |
