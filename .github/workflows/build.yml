@@ -25,6 +25,7 @@ jobs:
         with:
           repository: Loyalsoldier/geoip
           path: geoip
+          fetch-depth: 0
 
       - name: Set up Go
         uses: actions/setup-go@v5
