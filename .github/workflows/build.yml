@@ -64,12 +64,6 @@ jobs:
           for name in $(ls *.mmdb); do
             sha256sum ${name} > ./${name}.sha256sum
           done
-      - name: Purge jsdelivr CDN
-        run: |
-          cd output || exit 1
-          for file in $(ls); do
-            curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
-          done
 
       - name: Remove ненужные файлы перед релизом
         run: |
@@ -78,7 +72,6 @@ jobs:
           rm -rf ./output/GeoLite2-*.mmdb
           rm -rf ./output/GeoLite2-*.sha256sum
           rm -rf ./output/{clash,dat,mrs,nginx,srs,surge,text}
-          # Предполагается, что после удаления останется только geoip.dat
         shell: bash
 
       - name: Upload geoip.dat to GitHub Release
